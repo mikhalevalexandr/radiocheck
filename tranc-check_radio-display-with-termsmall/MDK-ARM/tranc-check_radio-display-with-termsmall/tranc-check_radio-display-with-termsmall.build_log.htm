@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Aleksandr Mikhalev, BMSTU, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  F:\fs\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+F:\fs_work\steering_wheel_Rev20-21\tranc-check_radio-display-with-termsmall\MDK-ARM\tranc-check_radio-display-with-termsmall.uvprojx
+Project File Date:  07/06/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'F:\fs\keil\ARM\ARMCC\Bin'
+Build target 'tranc-check_radio-display-with-termsmall'
+compiling NRF24.c...
+../Inc/NRF24.h(135): warning:  #1-D: last line of file ends without a newline
+  #endif /* NRF24_H_ */
+..\Src\NRF24.c(211): warning:  #223-D: function "sprintf" declared implicitly
+  	sprintf(str1,"STATUS: 0x%02X\r\n",status);
+..\Src\NRF24.c(208): warning:  #550-D: variable "gt"  was set but never used
+    uint16_t gt=0;
+..\Src\NRF24.c(467): warning:  #1-D: last line of file ends without a newline
+  */
+..\Src\NRF24.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=8104 RO-data=480 RW-data=24 ZI-data=1360  
+FromELF: creating hex file...
+"tranc-check_radio-display-with-termsmall\tranc-check_radio-display-with-termsmall.axf" - 0 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F3xx_DFP.2.1.0.pack
+                Keil.STM32F3xx_DFP.2.1.0
+                STMicroelectronics STM32F3 Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_tranc-check_radio-display-with-termsmall
+  C:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
