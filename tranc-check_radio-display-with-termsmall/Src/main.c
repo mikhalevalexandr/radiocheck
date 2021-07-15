@@ -51,8 +51,8 @@ UART_HandleTypeDef huart1;
 
 char str1[100]={0};
 
-uint8_t buf1[100]={0};
-uint8_t buf2[100]={0};
+uint8_t buf1[1]={0};
+uint8_t buf2[1]={0};
 
 /* USER CODE END PV */
 
@@ -79,7 +79,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
 	uint8_t dt_reg=0;
 	uint8_t retr_cnt, dt;
-	uint16_t on=111,off=666;
+	uint8_t on=0x6F, off=0x85;
   /* USER CODE END 1 */
   
 
@@ -115,31 +115,38 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		HAL_Delay(60);
+		HAL_Delay(ki 00);
 		
 		
 		//if(retr_cnt_full>999) retr_cnt_full=999;
 		//memcpy(buf1+1,(uint8_t*)&i,2);
 		//memcpy(buf1+2,(uint8_t*)&i,2);
-		if (!BUT)
-		{
-			memcpy(buf1,(uint8_t*)&on,2);
-			dt = NRF24L01_Send(buf1);
-		}
-		else
-		{
-			memcpy(buf1,(uint8_t*)&off,2);
-			dt = NRF24L01_Send(buf1);
-		}
+		//LED_OFF;
+		memcpy(buf1, &on,1);
+    NRF24L01_Send(buf1);
+		HAL_Delay(1000);
+		//LED_ON;
+		memcpy(buf1, &off,1);
+    NRF24L01_Send(buf1);
+//		if (!BUT)
+//		{
+//			memcpy(buf1, &on,1);
+//			NRF24L01_Send(buf1);
+//		}
+//		else
+//		{
+//			memcpy(buf1, &off,1);
+//			NRF24L01_Send(buf1);
+//		}
 		//NRF24L01_Receive();
 		//retr_cnt = dt & 0xF;
 		//i++;
 		//retr_cnt_full += retr_cnt;
-		/*dt_reg = NRF24_ReadReg(CONFIG);
+		dt_reg = NRF24_ReadReg(CONFIG);
 
 		sprintf(str1,"CONFIG: 0x%02X\r\n",dt_reg);
 
-		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+		/*HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
 		dt_reg = NRF24_ReadReg(EN_AA);
 
@@ -314,7 +321,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_Pin|CE1_Pin|CSN1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, CE1_Pin|CSN1_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : BUT_Pin */
   GPIO_InitStruct.Pin = BUT_Pin;
@@ -322,8 +332,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(BUT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_Pin CE1_Pin CSN1_Pin */
-  GPIO_InitStruct.Pin = LED_Pin|CE1_Pin|CSN1_Pin;
+  /*Configure GPIO pins : CE1_Pin CSN1_Pin */
+  GPIO_InitStruct.Pin = CE1_Pin|CSN1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -334,6 +344,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(IRQ1_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : LED_Pin */
+  GPIO_InitStruct.Pin = LED_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
 
 }
 

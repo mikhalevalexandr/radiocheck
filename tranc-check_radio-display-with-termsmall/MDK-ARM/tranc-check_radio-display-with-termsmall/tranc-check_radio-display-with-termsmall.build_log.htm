@@ -21,24 +21,24 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
-F:\fs_work\steering_wheel_Rev20-21\tranc-check_radio-display-with-termsmall\MDK-ARM\tranc-check_radio-display-with-termsmall.uvprojx
-Project File Date:  07/06/2021
+F:\fs_work\radiocheck\tranc-check_radio-display-with-termsmall\MDK-ARM\tranc-check_radio-display-with-termsmall.uvprojx
+Project File Date:  07/12/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'F:\fs\keil\ARM\ARMCC\Bin'
 Build target 'tranc-check_radio-display-with-termsmall'
-compiling NRF24.c...
+compiling main.c...
 ../Inc/NRF24.h(135): warning:  #1-D: last line of file ends without a newline
   #endif /* NRF24_H_ */
-..\Src\NRF24.c(211): warning:  #223-D: function "sprintf" declared implicitly
-  	sprintf(str1,"STATUS: 0x%02X\r\n",status);
-..\Src\NRF24.c(208): warning:  #550-D: variable "gt"  was set but never used
-    uint16_t gt=0;
-..\Src\NRF24.c(467): warning:  #1-D: last line of file ends without a newline
-  */
-..\Src\NRF24.c: 4 warnings, 0 errors
+../Src/main.c(147): warning:  #223-D: function "sprintf" declared implicitly
+  		sprintf(str1,"CONFIG: 0x%02X\r\n",dt_reg);
+../Src/main.c(81): warning:  #177-D: variable "retr_cnt"  was declared but never referenced
+  	uint8_t retr_cnt, dt;
+../Src/main.c(81): warning:  #177-D: variable "dt"  was declared but never referenced
+  	uint8_t retr_cnt, dt;
+../Src/main.c: 4 warnings, 0 errors
 linking...
-Program Size: Code=8104 RO-data=480 RW-data=24 ZI-data=1360  
+Program Size: Code=9360 RO-data=480 RW-data=24 ZI-data=1360  
 FromELF: creating hex file...
 "tranc-check_radio-display-with-termsmall\tranc-check_radio-display-with-termsmall.axf" - 0 Error(s), 4 Warning(s).
 

@@ -55,7 +55,7 @@ PCD_HandleTypeDef hpcd_USB_FS;
 
 char str1[100]={0};
 
-uint8_t buf1[100]={0};
+uint8_t buf1[1]={0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -83,7 +83,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
 	uint8_t dt_reg=0;
 	uint8_t retr_cnt, dt;
-	uint16_t i=1,receive=0;
+	uint8_t i=0,receive=0x85;
   /* USER CODE END 1 */
   
 
@@ -110,6 +110,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
+	//LED8_TGL;
 	NRF24_ini();
 	HAL_Delay(200);
 	//NRF24_ini2();
@@ -124,28 +125,53 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		
-		HAL_Delay(80);
-		receive=NRF24L01_Receive(i);
-		if (receive==0x006F){
+//		HAL_Delay(80);
+//		LED8_TGL;
+		
+		i=0;
+		do
+		{
+			HAL_Delay(1200);
+			receive=NRF24L01_Receive();
+			i++;
+		}
+		while (receive!=0x85 && receive!=0x6F && i<15);
+		if (receive==0x6F){
 			LED7_OFF;
 			RELAY_OFF;}
-		else if (receive==0x029A){
+		
+		else if (receive==0x85){
 			LED7_ON;
 			RELAY_ON;}
-		else {
-			LED7_ON;
-			RELAY_ON;
-			NRF24_ini();
-}
+		else if (receive==0x00){
+			LED2_TGL;}
+		else if (receive==0x01){
+			LED8_TGL;}
 		
+			
+			
+			
+			
+//		else 
+//			{
+//			LED7_ON;
+//			RELAY_ON;
+//			NRF24_ini();
+//}
+//		else {
+//			LED7_ON; 
+//			RELAY_ON;
+//			NRF24_ini();
+//			}
 
 
 
-/*  dt_reg = NRF24_ReadReg(CONFIG);
+
+  dt_reg = NRF24_ReadReg(CONFIG);
 
   sprintf(str1,"CONFIG: 0x%02Xrn",dt_reg);
 
-  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+  /*HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
   dt_reg = NRF24_ReadReg(EN_AA);
 
@@ -434,11 +460,17 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : IRQ1_Pin IRQ2_Pin */
-  GPIO_InitStruct.Pin = IRQ1_Pin|IRQ2_Pin;
+  /*Configure GPIO pin : IRQ1_Pin */
+  GPIO_InitStruct.Pin = IRQ1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(IRQ1_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : IRQ2_Pin */
+  GPIO_InitStruct.Pin = IRQ2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+  HAL_GPIO_Init(IRQ2_GPIO_Port, &GPIO_InitStruct);
 
 }
 

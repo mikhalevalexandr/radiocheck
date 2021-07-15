@@ -62,8 +62,6 @@ void Error_Handler(void);
 #define MCO_GPIO_Port GPIOF
 #define BUT_Pin GPIO_PIN_1
 #define BUT_GPIO_Port GPIOA
-#define LED_Pin GPIO_PIN_2
-#define LED_GPIO_Port GPIOA
 #define CE1_Pin GPIO_PIN_3
 #define CE1_GPIO_Port GPIOA
 #define CSN1_Pin GPIO_PIN_4
@@ -74,6 +72,8 @@ void Error_Handler(void);
 #define SWDIO_GPIO_Port GPIOA
 #define SWCLK_Pin GPIO_PIN_14
 #define SWCLK_GPIO_Port GPIOA
+#define LED_Pin GPIO_PIN_3
+#define LED_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

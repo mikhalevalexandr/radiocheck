@@ -13,7 +13,7 @@ extern UART_HandleTypeDef huart1;
 
 #define TX_ADR_WIDTH 3
 
-#define TX_PLOAD_WIDTH 5
+#define TX_PLOAD_WIDTH 1
 
 uint8_t TX_ADDRESS[TX_ADR_WIDTH] = {0xb3,0xb4,0x01};
 uint8_t RX_BUF[TX_PLOAD_WIDTH] = {0};
@@ -167,10 +167,10 @@ void NRF24_Transmit(uint8_t addr,uint8_t *pBuf,uint8_t bytes)
 
 //------------------------------------------------
 
-uint8_t NRF24L01_Send(uint8_t *pBuf)
+void NRF24L01_Send(uint8_t *pBuf)
 {
 
-  uint8_t status=0x00, regval=0x00;
+  uint8_t status=*pBuf, regval=0x00;
 	NRF24L01_TX_Mode(pBuf);
 	regval = NRF24_ReadReg(CONFIG);
 	//если модуль ушел в спящий режим, то разбудим его, включив бит PWR_UP и выключив PRIM_RX
@@ -198,7 +198,6 @@ uint8_t NRF24L01_Send(uint8_t *pBuf)
 	regval = NRF24_ReadReg(OBSERVE_TX);
 	//Уходим в режим приёмника
   NRF24L01_RX_Mode();
-  return regval;
 }
 //------------------------------------------------
 
@@ -238,13 +237,13 @@ void NRF24_ini(void)
 	NRF24_WriteReg(DYNPD, 0);
 	NRF24_WriteReg(STATUS, 0x70); //Reset flags for IRQ1
 	NRF24_WriteReg(RF_CH, 76); // частота 2476 MHz
-	NRF24_WriteReg(RF_SETUP, 0x00); //TX_PWR:0dBm, Datarate:1Mbps
+	NRF24_WriteReg(RF_SETUP, 0x2E); //TX_PWR:0dBm, Datarate:1Mbps
 	NRF24_Write_Buf(TX_ADDR, TX_ADDRESS, TX_ADR_WIDTH);
 	NRF24_Write_Buf(RX_ADDR_P0, TX_ADDRESS, TX_ADR_WIDTH);
 	NRF24_WriteReg(RX_PW_P0, TX_PLOAD_WIDTH); //Number of bytes in RX payload in data pipe 0
 	 //пока уходим в режим приёмника
   NRF24L01_RX_Mode();
-  //LED_OFF;
+  LED_OFF;
 }
 
 

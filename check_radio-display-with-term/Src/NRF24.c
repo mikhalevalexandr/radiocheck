@@ -13,13 +13,13 @@ extern UART_HandleTypeDef huart1;
 
 #define TX_ADR_WIDTH 3
 
-#define TX_PLOAD_WIDTH 5
+#define TX_PLOAD_WIDTH 1
 
 uint8_t TX_ADDRESS[TX_ADR_WIDTH] = {0xb3,0xb4,0x01};
 uint8_t RX_BUF[TX_PLOAD_WIDTH] = {0};
 extern char str1[150];
 uint8_t ErrCnt_Fl = 0;
-uint16_t data=0;
+uint8_t data=0x01;
 
 //------------------------------------------------
 
@@ -202,23 +202,33 @@ uint8_t NRF24L01_Send(uint8_t *pBuf)
 }
 //------------------------------------------------
 
-uint16_t NRF24L01_Receive(uint16_t buf)
+uint8_t NRF24L01_Receive()
 {
   uint8_t status=0x01;
-  uint16_t gt=0x00;
-	//while((GPIO_PinState)IRQ1 == GPIO_PIN_SET) {}
-	status = NRF24_ReadReg(STATUS);
-	sprintf(str1,"STATUS: 0x%02X\r\n",status);
+  uint8_t gt=0x01;
+	//while(IRQ1) {}
+//	status = NRF24_ReadReg(STATUS);
+//	sprintf(str1,"STATUS: 0x%02X\r\n",status);
 	//HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 	//LED_TGL;
-	DelayMicro(15);
-  status = NRF24_ReadReg(STATUS);
-//  if(status & 0x40)
+	status = NRF24_ReadReg(STATUS);
+	if(status & 0x40)
+	{
+		do{
+			DelayMicro(15);
+			NRF24_Read_Buf(RD_RX_PLOAD,RX_BUF,TX_PLOAD_WIDTH);
+			DelayMicro(15);
+			NRF24_WriteReg(STATUS, 0x40);
+			status = NRF24_ReadReg(STATUS);
+
+		}
+		while (status & 0x40);
+	}
+//  
 //  {
-    NRF24_Read_Buf(RD_RX_PLOAD,RX_BUF,TX_PLOAD_WIDTH);
-    gt = *(int16_t*)RX_BUF;
+    gt = *RX_BUF;
     //gt = *(int16_t*)(RX_BUF+2);
-    NRF24_WriteReg(STATUS, 0x40);
+
 //  }
 	data=gt;
 	//sprintf(str1,"DATA: 0x%02X\r\n",data);
@@ -229,7 +239,7 @@ uint16_t NRF24L01_Receive(uint16_t buf)
 //	else{
 //		LED7_ON;
 //		RELAY_ON;}
-	NRF24_FlushRX();
+	//NRF24_FlushRX();
 	return gt;
 
 }
@@ -238,7 +248,7 @@ void NRF24_ini(void)
 {
 	CE1_RESET;
   DelayMicro(5000);
-	NRF24_WriteReg(CONFIG, 0x7a); // Set PWR_UP bit, enable CRC(1 byte) &Prim_RX:0 (Transmitter)
+	NRF24_WriteReg(CONFIG, 0x3a); // Set PWR_UP bit, enable CRC(1 byte) &Prim_RX:0 (Transmitter)
 	DelayMicro(5000);
 	NRF24_WriteReg(EN_AA, 0x02); // Enable Pipe1
 	NRF24_WriteReg(EN_RXADDR, 0x02); // Enable Pipe1
@@ -247,9 +257,9 @@ void NRF24_ini(void)
 	NRF24_ToggleFeatures();
 	NRF24_WriteReg(FEATURE, 0);
 	NRF24_WriteReg(DYNPD, 0);
-	NRF24_WriteReg(STATUS, 0x70); //Reset flags for IRQ1
+	NRF24_WriteReg(STATUS, 0x40); //Reset flags for IRQ1
 	NRF24_WriteReg(RF_CH, 76); // частота 2476 MHz
-	NRF24_WriteReg(RF_SETUP, 0x00); //TX_PWR:0dBm, Datarate:1Mbps
+	NRF24_WriteReg(RF_SETUP, 0x2E); //TX_PWR:0dBm, Datarate:1Mbps
 	NRF24_Write_Buf(TX_ADDR, TX_ADDRESS, TX_ADR_WIDTH);
 	NRF24_Write_Buf(RX_ADDR_P1, TX_ADDRESS, TX_ADR_WIDTH);
 	NRF24_WriteReg(RX_PW_P1, TX_PLOAD_WIDTH); //Number of bytes in RX payload in data pipe 0

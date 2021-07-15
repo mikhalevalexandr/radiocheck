@@ -42,9 +42,16 @@
 
 #define LED2_TGL HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin)
 
+#define LED8_ON HAL_GPIO_WritePin(LD8_GPIO_Port, LD8_Pin, GPIO_PIN_RESET)
+
+#define LED8_OFF HAL_GPIO_WritePin(LD8_GPIO_Port, LD8_Pin, GPIO_PIN_SET)
+
+#define LED8_TGL HAL_GPIO_TogglePin(LD8_GPIO_Port, LD8_Pin)
+
 #define LED7_ON HAL_GPIO_WritePin(LD7_GPIO_Port, LD7_Pin, GPIO_PIN_RESET)
 
 #define LED7_OFF HAL_GPIO_WritePin(LD7_GPIO_Port, LD7_Pin, GPIO_PIN_SET)
+
 #define RELAY_OFF HAL_GPIO_WritePin(RELAY_GPIO_Port, RELAY_Pin, GPIO_PIN_SET)
 #define RELAY_ON HAL_GPIO_WritePin(RELAY_GPIO_Port, RELAY_Pin, GPIO_PIN_RESET)
 
@@ -120,7 +127,7 @@ uint8_t NRF24_ReadReg(uint8_t addr);
 
 void NRF24_Read_Buf(uint8_t addr,uint8_t *pBuf,uint8_t bytes);
 uint8_t NRF24L01_Send(uint8_t *pBuf);
-uint16_t NRF24L01_Receive(uint16_t buf);
+uint8_t NRF24L01_Receive();
 
 
 /*void NRF24_ini2(void);

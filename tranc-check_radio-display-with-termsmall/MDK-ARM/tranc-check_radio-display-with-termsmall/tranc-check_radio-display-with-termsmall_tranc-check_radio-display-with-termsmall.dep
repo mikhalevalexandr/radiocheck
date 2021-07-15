@@ -1,10 +1,10 @@
 Dependencies for Project 'tranc-check_radio-display-with-termsmall', Target 'tranc-check_radio-display-with-termsmall': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
-F (startup_stm32f303x8.s)(0x60E4A5D1)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include--pd "__UVISION_VERSION SETA 531" --pd "_RTE_ SETA 1" --pd "STM32F303x8 SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f303x8.lst --xref -o tranc-check_radio-display-with-termsmall\startup_stm32f303x8.o --depend tranc-check_radio-display-with-termsmall\startup_stm32f303x8.d)
-F (..\Src\NRF24.c)(0x60E891C7)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\nrf24.o --omf_browse tranc-check_radio-display-with-termsmall\nrf24.crf --depend tranc-check_radio-display-with-termsmall\nrf24.d)
-I (../Inc/NRF24.h)(0x60E49B52)
+F (startup_stm32f303x8.s)(0x60EC8A32)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include--pd "__UVISION_VERSION SETA 531" --pd "_RTE_ SETA 1" --pd "STM32F303x8 SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f303x8.lst --xref -o tranc-check_radio-display-with-termsmall\startup_stm32f303x8.o --depend tranc-check_radio-display-with-termsmall\startup_stm32f303x8.d)
+F (..\Src\NRF24.c)(0x60EDE4DE)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\nrf24.o --omf_browse tranc-check_radio-display-with-termsmall\nrf24.crf --depend tranc-check_radio-display-with-termsmall\nrf24.d)
+I (../Inc/NRF24.h)(0x60EC7EE8)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -34,12 +34,12 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
-I (../Inc/main.h)(0x60E4A5CD)
+I (../Inc/main.h)(0x60EC8A2E)
 I (F:\fs\keil\ARM\ARMCC\include\string.h)(0x5EC7BC54)
-F (../Src/main.c)(0x60E89162)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\main.o --omf_browse tranc-check_radio-display-with-termsmall\main.crf --depend tranc-check_radio-display-with-termsmall\main.d)
-I (../Inc/main.h)(0x60E4A5CD)
+F (../Src/main.c)(0x60EF17EF)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\main.o --omf_browse tranc-check_radio-display-with-termsmall\main.crf --depend tranc-check_radio-display-with-termsmall\main.d)
+I (../Inc/main.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -69,12 +69,12 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
-I (../Inc/NRF24.h)(0x60E49B52)
+I (../Inc/NRF24.h)(0x60EC7EE8)
 I (F:\fs\keil\ARM\ARMCC\include\string.h)(0x5EC7BC54)
-F (../Src/stm32f3xx_it.c)(0x60E4A5CC)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_it.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_it.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_it.d)
-I (../Inc/main.h)(0x60E4A5CD)
+F (../Src/stm32f3xx_it.c)(0x60EC8A2D)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_it.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_it.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_it.d)
+I (../Inc/main.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -104,11 +104,11 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
-I (../Inc/stm32f3xx_it.h)(0x60E4A5CD)
-F (../Src/stm32f3xx_hal_msp.c)(0x60E4A5CD)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_msp.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_msp.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_msp.d)
-I (../Inc/main.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_it.h)(0x60EC8A2D)
+F (../Src/stm32f3xx_hal_msp.c)(0x60EC8A2D)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_msp.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_msp.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_msp.d)
+I (../Inc/main.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -140,7 +140,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_spi.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_spi.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_spi.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -172,7 +172,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_spi_ex.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_spi_ex.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_spi_ex.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -204,7 +204,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -236,7 +236,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_rcc.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_rcc.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_rcc.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -268,7 +268,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_rcc_ex.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_rcc_ex.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_rcc_ex.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -300,7 +300,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_gpio.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_gpio.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_gpio.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -332,7 +332,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_dma.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_dma.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_dma.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -364,7 +364,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_cortex.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_cortex.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_cortex.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -396,7 +396,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_pwr.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_pwr.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_pwr.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -428,7 +428,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_pwr_ex.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_pwr_ex.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_pwr_ex.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -460,7 +460,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_flash.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_flash.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_flash.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -492,7 +492,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_flash_ex.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_flash_ex.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_flash_ex.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -524,7 +524,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_i2c.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_i2c.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_i2c.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -556,7 +556,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_i2c_ex.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_i2c_ex.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_i2c_ex.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -588,7 +588,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_exti.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_exti.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_exti.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -620,7 +620,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_tim.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_tim.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_tim.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -652,7 +652,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_tim_ex.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_tim_ex.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_tim_ex.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -684,7 +684,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_uart.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_uart.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_uart.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -716,7 +716,7 @@ I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h)(0x60D2291E)
 F (../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c)(0x60D2291E)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc -I ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_tranc-check_radio-display-with-termsmall-IC:\Users\mikha\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\mikha\AppData\Local\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F303x8 -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F303x8-o tranc-check_radio-display-with-termsmall\stm32f3xx_hal_uart_ex.o --omf_browse tranc-check_radio-display-with-termsmall\stm32f3xx_hal_uart_ex.crf --depend tranc-check_radio-display-with-termsmall\stm32f3xx_hal_uart_ex.d)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h)(0x60D2291E)
@@ -756,7 +756,7 @@ I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x60D228F7)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x60D228F7)
 I (../Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h)(0x60D2291E)
-I (../Inc/stm32f3xx_hal_conf.h)(0x60E4A5CD)
+I (../Inc/stm32f3xx_hal_conf.h)(0x60EC8A2E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h)(0x60D2291E)
 I (../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x60D2291E)
