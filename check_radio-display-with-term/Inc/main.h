@@ -96,6 +96,7 @@ void Error_Handler(void);
 #define CSN2_GPIO_Port GPIOB
 #define IRQ1_Pin GPIO_PIN_14
 #define IRQ1_GPIO_Port GPIOD
+#define IRQ1_EXTI_IRQn EXTI15_10_IRQn
 #define IRQ2_Pin GPIO_PIN_15
 #define IRQ2_GPIO_Port GPIOD
 #define DM_Pin GPIO_PIN_11

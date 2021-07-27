@@ -18,6 +18,7 @@ extern UART_HandleTypeDef huart1;
 uint8_t TX_ADDRESS[TX_ADR_WIDTH] = {0xb3,0xb4,0x01};
 uint8_t RX_BUF[TX_PLOAD_WIDTH] = {0};
 extern char str1[150];
+extern uint8_t receive;
 uint8_t ErrCnt_Fl = 0;
 uint8_t data=0x01;
 
@@ -248,7 +249,7 @@ void NRF24_ini(void)
 {
 	CE1_RESET;
   DelayMicro(5000);
-	NRF24_WriteReg(CONFIG, 0x3a); // Set PWR_UP bit, enable CRC(1 byte) &Prim_RX:0 (Transmitter)
+	NRF24_WriteReg(CONFIG, 0x0a); // Set PWR_UP bit, enable CRC(1 byte) &Prim_RX:0 (Transmitter)
 	DelayMicro(5000);
 	NRF24_WriteReg(EN_AA, 0x02); // Enable Pipe1
 	NRF24_WriteReg(EN_RXADDR, 0x02); // Enable Pipe1
@@ -257,7 +258,7 @@ void NRF24_ini(void)
 	NRF24_ToggleFeatures();
 	NRF24_WriteReg(FEATURE, 0);
 	NRF24_WriteReg(DYNPD, 0);
-	NRF24_WriteReg(STATUS, 0x40); //Reset flags for IRQ1
+	NRF24_WriteReg(STATUS, 0x70); //Reset flags for IRQ1
 	NRF24_WriteReg(RF_CH, 76); // частота 2476 MHz
 	NRF24_WriteReg(RF_SETUP, 0x2E); //TX_PWR:0dBm, Datarate:1Mbps
 	NRF24_Write_Buf(TX_ADDR, TX_ADDRESS, TX_ADR_WIDTH);
@@ -267,7 +268,19 @@ void NRF24_ini(void)
   NRF24L01_RX_Mode();
   LED_TGL;
 }
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	uint8_t receive=0x01;
+	if(GPIO_Pin== GPIO_PIN_1) {
 
+    receive=NRF24L01_Receive();
+
+  } else{
+
+    __NOP();
+
+  }
+}
 
 //--------------------------------------------------
 /////////////////////////////////////////////////////////
