@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"radio-receiver-nucleo\startup_stm32f334x8.o"
+"radio-receiver-nucleo\main.o"
+"radio-receiver-nucleo\stm32f3xx_it.o"
+"radio-receiver-nucleo\stm32f3xx_hal_msp.o"
+"radio-receiver-nucleo\nrf24.o"
+"radio-receiver-nucleo\stm32f3xx_hal_spi.o"
+"radio-receiver-nucleo\stm32f3xx_hal_spi_ex.o"
+"radio-receiver-nucleo\stm32f3xx_hal.o"
+"radio-receiver-nucleo\stm32f3xx_hal_rcc.o"
+"radio-receiver-nucleo\stm32f3xx_hal_rcc_ex.o"
+"radio-receiver-nucleo\stm32f3xx_hal_gpio.o"
+"radio-receiver-nucleo\stm32f3xx_hal_dma.o"
+"radio-receiver-nucleo\stm32f3xx_hal_cortex.o"
+"radio-receiver-nucleo\stm32f3xx_hal_pwr.o"
+"radio-receiver-nucleo\stm32f3xx_hal_pwr_ex.o"
+"radio-receiver-nucleo\stm32f3xx_hal_flash.o"
+"radio-receiver-nucleo\stm32f3xx_hal_flash_ex.o"
+"radio-receiver-nucleo\stm32f3xx_hal_i2c.o"
+"radio-receiver-nucleo\stm32f3xx_hal_i2c_ex.o"
+"radio-receiver-nucleo\stm32f3xx_hal_exti.o"
+"radio-receiver-nucleo\stm32f3xx_hal_tim.o"
+"radio-receiver-nucleo\stm32f3xx_hal_tim_ex.o"
+"radio-receiver-nucleo\system_stm32f3xx.o"
+--library_type=microlib --strict --scatter "radio-receiver-nucleo\radio-receiver-nucleo.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "radio-receiver-nucleo.map" -o radio-receiver-nucleo\radio-receiver-nucleo.axf

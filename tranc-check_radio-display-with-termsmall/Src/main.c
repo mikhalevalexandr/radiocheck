@@ -115,17 +115,17 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		HAL_Delay(ki 00);
+		HAL_Delay(5000);
 		
 		
 		//if(retr_cnt_full>999) retr_cnt_full=999;
 		//memcpy(buf1+1,(uint8_t*)&i,2);
 		//memcpy(buf1+2,(uint8_t*)&i,2);
-		//LED_OFF;
+		LED_OFF;
 		memcpy(buf1, &on,1);
     NRF24L01_Send(buf1);
-		HAL_Delay(1000);
-		//LED_ON;
+		HAL_Delay(5000);
+		LED_ON;
 		memcpy(buf1, &off,1);
     NRF24L01_Send(buf1);
 //		if (!BUT)
