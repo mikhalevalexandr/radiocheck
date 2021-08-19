@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"receiver_nucleo\startup_stm32f401xe.o"
+"receiver_nucleo\main.o"
+"receiver_nucleo\stm32f4xx_it.o"
+"receiver_nucleo\stm32f4xx_hal_msp.o"
+"receiver_nucleo\stm32f4xx_hal_tim.o"
+"receiver_nucleo\stm32f4xx_hal_tim_ex.o"
+"receiver_nucleo\stm32f4xx_hal_uart.o"
+"receiver_nucleo\stm32f4xx_hal_rcc.o"
+"receiver_nucleo\stm32f4xx_hal_rcc_ex.o"
+"receiver_nucleo\stm32f4xx_hal_flash.o"
+"receiver_nucleo\stm32f4xx_hal_flash_ex.o"
+"receiver_nucleo\stm32f4xx_hal_flash_ramfunc.o"
+"receiver_nucleo\stm32f4xx_hal_gpio.o"
+"receiver_nucleo\stm32f4xx_hal_dma_ex.o"
+"receiver_nucleo\stm32f4xx_hal_dma.o"
+"receiver_nucleo\stm32f4xx_hal_pwr.o"
+"receiver_nucleo\stm32f4xx_hal_pwr_ex.o"
+"receiver_nucleo\stm32f4xx_hal_cortex.o"
+"receiver_nucleo\stm32f4xx_hal.o"
+"receiver_nucleo\stm32f4xx_hal_exti.o"
+"receiver_nucleo\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "receiver_nucleo\receiver_nucleo.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "receiver_nucleo.map" -o receiver_nucleo\receiver_nucleo.axf

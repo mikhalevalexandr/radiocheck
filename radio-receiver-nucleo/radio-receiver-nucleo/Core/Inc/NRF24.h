@@ -127,9 +127,10 @@ uint8_t NRF24_ReadReg(uint8_t addr);
 
 void NRF24_Read_Buf(uint8_t addr,uint8_t *pBuf,uint8_t bytes);
 uint8_t NRF24L01_Send(uint8_t *pBuf);
-uint8_t NRF24L01_Receive();
+uint8_t NRF24L01_Receive(void);
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
-
+void NRF24_WriteReg(uint8_t addr, uint8_t dt);
+void  TIM_ResetCounter ( TIM_TypeDef *   TIMx );
 /*void NRF24_ini2(void);
 uint8_t NRF24_ReadReg2(uint8_t addr);
 

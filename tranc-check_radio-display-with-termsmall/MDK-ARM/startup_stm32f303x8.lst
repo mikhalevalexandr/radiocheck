@@ -514,19 +514,18 @@ ARM Macro Assembler    Page 8
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
 interwork --depend=tranc-check_radio-display-with-termsmall\startup_stm32f303x8
 .d -otranc-check_radio-display-with-termsmall\startup_stm32f303x8.o -I.\RTE\_tr
-anc-check_radio-display-with-termsmall -IC:\Users\BRT-LAB-2-PC\AppData\Local\Ar
-m\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include -IC:\Users\BRT-LAB-2-PC\AppData\Loca
-l\Arm\Packs\Keil\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include 
---predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVIS
+anc-check_radio-display-with-termsmall -IC:\Users\mikha\AppData\Local\Arm\Packs
+\ARM\CMSIS\5.7.0\CMSIS\Core\Include -IC:\Users\mikha\AppData\Local\Arm\Packs\Ke
+il\STM32F3xx_DFP\2.1.0\Drivers\CMSIS\Device\ST\STM32F3xx\Include --predefine="_
+_EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SE
 
 
 
 ARM Macro Assembler    Page 9 
 
 
-ION_VERSION SETA 531" --predefine="_RTE_ SETA 1" --predefine="STM32F303x8 SETA 
-1" --predefine="_RTE_ SETA 1" --list=startup_stm32f303x8.lst startup_stm32f303x
-8.s
+TA 531" --predefine="_RTE_ SETA 1" --predefine="STM32F303x8 SETA 1" --predefine
+="_RTE_ SETA 1" --list=startup_stm32f303x8.lst startup_stm32f303x8.s
 
 
 

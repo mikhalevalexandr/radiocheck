@@ -46,21 +46,25 @@
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
 
+TIM_HandleTypeDef htim1;
+
 /* USER CODE BEGIN PV */
 char str1[150]={0};
+uint8_t dt_reg=0;
+uint8_t receive=0x03;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
 /* USER CODE END 0 */
 
 /**
@@ -70,9 +74,9 @@ static void MX_SPI1_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint8_t dt_reg=0;
+	
 	uint8_t retr_cnt, dt;
-	uint8_t i=0,receive=0x85;
+	uint8_t i=0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -94,83 +98,83 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI1_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+	HAL_TIM_Base_Start_IT(&htim1);
 	//LED8_TGL;
 	NRF24_ini();
 	HAL_Delay(200);
 	//NRF24_ini2();
-//	void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);//receive with interrupt 
+  /* USER CODE BEGIN TIM1_UP_TIM16_IRQn 0 */
+	//LED2_TGL;
+//	NRF24_WriteReg(CONFIG, 0x38);
+//	HAL_Delay(300);
+//	NRF24_ini();
+  /* USER CODE END TIM1_UP_TIM16_IRQn 0 */
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		/* USER CODE END WHILE */
-		
+    /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
-//							i=0;
+							i=0;
 //		do
 //		{
-//			HAL_Delay(1200);
+			HAL_Delay(300);
+		//LED2_TGL;
 //			receive=NRF24L01_Receive();
 //			i++;
 //		}
 //		while (receive!=0x85 && receive!=0x6F && i<15);
-//		if (receive==0x6F){
-//			LED2_OFF;
-//			RELAY_OFF;}
-//		
-//		else if (receive==0x85){
-//			LED2_ON;
-//			RELAY_ON;}
-//		else if (receive==0x00){
-//			LED2_TGL;}
-//		else if (receive==0x01){
-//			LED2_TGL;}
+		
+
+
 			
 			
 	dt_reg = NRF24_ReadReg(CONFIG);
 
   sprintf(str1,"CONFIG: 0x%02X\r\n",dt_reg);
-
-  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+	sprintf(str1,"CONFIG: 0x%02X\r\n",dt_reg);
+//  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
   dt_reg = NRF24_ReadReg(EN_AA);
 
-  sprintf(str1,"EN_AA: 0x%02Xrn",dt_reg);
+  sprintf(str1,"EN_AA: 0x%02X\r\n",receive);
 
-  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
   dt_reg = NRF24_ReadReg(EN_RXADDR);
 
-  sprintf(str1,"EN_RXADDR: 0x%02Xrn",dt_reg);
+  sprintf(str1,"EN_RXADDR: 0x%02X\r\n",dt_reg);
 
-  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
   dt_reg = NRF24_ReadReg(STATUS);
 
-  sprintf(str1,"STATUS: 0x%02Xrn",dt_reg);
+  sprintf(str1,"STATUS: 0x%02X\r\n",dt_reg);
 
-  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
   dt_reg = NRF24_ReadReg(RF_SETUP);
 
-  sprintf(str1,"RF_SETUP: 0x%02Xrn",dt_reg);
+  sprintf(str1,"RF_SETUP: 0x%02X\r\n",dt_reg);
 
-  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
-  NRF24_Read_Buf(TX_ADDR,buf1,3);
+//  NRF24_Read_Buf(TX_ADDR,buf1,3);
 
-  sprintf(str1,"TX_ADDR: 0x%02X, 0x%02X, 0x%02Xrn",buf1[0],buf1[1],buf1[2]);
+//  sprintf(str1,"TX_ADDR: 0x%02X, 0x%02X, 0x%02Xrn",buf1[0],buf1[1],buf1[2]);
 
-  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
-  NRF24_Read_Buf(RX_ADDR_P1,buf1,3);
+//  NRF24_Read_Buf(RX_ADDR_P1,buf1,3);
 
-  sprintf(str1,"RX_ADDR: 0x%02X, 0x%02X, 0x%02Xrn",buf1[0],buf1[1],buf1[2]);
+//  sprintf(str1,"RX_ADDR: 0x%02X, 0x%02X, 0x%02Xrn",buf1[0],buf1[1],buf1[2]);
 
-  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//  HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 	
   }
   /* USER CODE END 3 */
@@ -184,6 +188,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -211,6 +216,12 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_TIM1;
+  PeriphClkInit.Tim1ClockSelection = RCC_TIM1CLK_HCLK;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+  {
+    Error_Handler();
+  }
 }
 
 /**
@@ -232,7 +243,7 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
@@ -250,6 +261,53 @@ static void MX_SPI1_Init(void)
   /* USER CODE BEGIN SPI1_Init 2 */
 
   /* USER CODE END SPI1_Init 2 */
+
+}
+
+/**
+  * @brief TIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM1_Init(void)
+{
+
+  /* USER CODE BEGIN TIM1_Init 0 */
+
+  /* USER CODE END TIM1_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM1_Init 1 */
+
+  /* USER CODE END TIM1_Init 1 */
+  htim1.Instance = TIM1;
+  htim1.Init.Prescaler = 6399;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.Period = 3000;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim1.Init.RepetitionCounter = 0;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM1_Init 2 */
+
+  /* USER CODE END TIM1_Init 2 */
 
 }
 
@@ -298,7 +356,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : IRQ1_Pin */
   GPIO_InitStruct.Pin = IRQ1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(IRQ1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : RELAY_Pin CE1_Pin CSN1_Pin */

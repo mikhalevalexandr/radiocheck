@@ -6,14 +6,14 @@ radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/s
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f334x8.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/CMSIS/Include/core_cm4.h
-radio-receiver-nucleo\stm32f3xx_hal_tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+radio-receiver-nucleo\stm32f3xx_hal_tim.o: F:\fs\keil\ARM\ARMCC\Bin\..\include\stdint.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/CMSIS/Include/cmsis_version.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-radio-receiver-nucleo\stm32f3xx_hal_tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+radio-receiver-nucleo\stm32f3xx_hal_tim.o: F:\fs\keil\ARM\ARMCC\Bin\..\include\stddef.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc_ex.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio_ex.h
@@ -29,3 +29,5 @@ radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/s
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h
 radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h
+radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim.h
+radio-receiver-nucleo\stm32f3xx_hal_tim.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim_ex.h

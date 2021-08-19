@@ -13,7 +13,7 @@ extern UART_HandleTypeDef huart1;
 
 #define TX_ADR_WIDTH 3
 
-#define TX_PLOAD_WIDTH 1
+#define TX_PLOAD_WIDTH 5
 
 uint8_t TX_ADDRESS[TX_ADR_WIDTH] = {0xb3,0xb4,0x01};
 uint8_t RX_BUF[TX_PLOAD_WIDTH] = {0};

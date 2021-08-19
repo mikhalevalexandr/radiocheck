@@ -13,8 +13,7 @@ extern SPI_HandleTypeDef hspi2;
 
 #define TX_ADR_WIDTH 3
 
-#define TX_PLOAD_WIDTH 1
-
+#define TX_PLOAD_WIDTH 5
 uint8_t TX_ADDRESS[TX_ADR_WIDTH] = {0xb3,0xb4,0x01};
 uint8_t RX_BUF[TX_PLOAD_WIDTH] = {0};
 extern char str1[150];
@@ -203,7 +202,7 @@ uint8_t NRF24L01_Send(uint8_t *pBuf)
 }
 //------------------------------------------------
 
-uint8_t NRF24L01_Receive()
+uint8_t NRF24L01_Receive(void)
 {
   uint8_t status=0x01;
   uint8_t gt=0x01;
@@ -249,7 +248,7 @@ void NRF24_ini(void)
 {
 	CE1_RESET;
   DelayMicro(5000);
-	NRF24_WriteReg(CONFIG, 0x0a); // Set PWR_UP bit, enable CRC(1 byte) &Prim_RX:0 (Transmitter)
+	NRF24_WriteReg(CONFIG, 0x3a); // Set PWR_UP bit, enable CRC(1 byte) &Prim_RX:0 (Transmitter)
 	DelayMicro(5000);
 	NRF24_WriteReg(EN_AA, 0x02); // Enable Pipe1
 	NRF24_WriteReg(EN_RXADDR, 0x02); // Enable Pipe1
@@ -260,7 +259,7 @@ void NRF24_ini(void)
 	NRF24_WriteReg(DYNPD, 0);
 	NRF24_WriteReg(STATUS, 0x70); //Reset flags for IRQ1
 	NRF24_WriteReg(RF_CH, 76); // частота 2476 MHz
-	NRF24_WriteReg(RF_SETUP, 0x2E); //TX_PWR:0dBm, Datarate:1Mbps
+	NRF24_WriteReg(RF_SETUP, 0x06); //TX_PWR:0dBm, Datarate:1Mbps
 	NRF24_Write_Buf(TX_ADDR, TX_ADDRESS, TX_ADR_WIDTH);
 	NRF24_Write_Buf(RX_ADDR_P1, TX_ADDRESS, TX_ADR_WIDTH);
 	NRF24_WriteReg(RX_PW_P1, TX_PLOAD_WIDTH); //Number of bytes in RX payload in data pipe 0
@@ -269,13 +268,35 @@ void NRF24_ini(void)
   //LED_TGL;
 	
 }
+void  TIM_ResetCounter ( TIM_TypeDef *   TIMx ) 
+ { 
+   /* Check the parameters */ assert_param ( IS_TIM_ALL_PERIPH ( TIMx )); 
+
+   /* Reset the Counter Register value */ 
+   TIMx -> CNT =   0 ; 
+ } 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	uint8_t receive=0x01;
-	if(GPIO_Pin== GPIO_PIN_1) {
-
+//	uint8_t receive=0x01;
+	
+	TIM_ResetCounter ( TIM1 );
+	if(GPIO_Pin== GPIO_PIN_14) {
+		// этот цикл вроде помогает, когда происходит ложное прерывание но на spi ничего не весит или весит хуйня, тогда просто не общаемся по spi 
+		for (int i=0; i<100; i++)
+		{
+			DelayMicro(100);
+			if (IRQ1) return;
+		}
     receive=NRF24L01_Receive();
-
+		//LED2_TGL;
+				if (receive==0x6F){
+			//LED2_OFF;
+			RELAY_OFF;}
+		
+		else if (receive==0x85){
+			//HAL_Delay(300);
+			//LED2_ON;
+			RELAY_ON;}
   } else{
 
     __NOP();

@@ -53,7 +53,7 @@ char str1[100]={0};
 
 uint8_t buf1[1]={0};
 uint8_t buf2[1]={0};
-
+uint8_t dt_reg=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -77,7 +77,6 @@ static void MX_USART1_UART_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint8_t dt_reg=0;
 	uint8_t retr_cnt, dt;
 	uint8_t on=0x6F, off=0x85;
   /* USER CODE END 1 */
@@ -115,29 +114,38 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		HAL_Delay(5000);
+		HAL_Delay(30);
 		
 		
 		//if(retr_cnt_full>999) retr_cnt_full=999;
 		//memcpy(buf1+1,(uint8_t*)&i,2);
 		//memcpy(buf1+2,(uint8_t*)&i,2);
-		LED_OFF;
-		memcpy(buf1, &on,1);
-    NRF24L01_Send(buf1);
-		HAL_Delay(5000);
+		
+		
+		
+//		LED_OFF;
+//		memcpy(buf1, &on,1);
+//    NRF24L01_Send(buf1);
+//		HAL_Delay(1000);
+//		LED_ON;
+//		memcpy(buf1, &off,1);
+//    NRF24L01_Send(buf1);
+		
+		
+		
+		if (!BUT)
+		{
+			memcpy(buf1, &on,1);
+			NRF24L01_Send(buf1);
+				LED_OFF;
+		}
+		else
+		{
+			memcpy(buf1, &off,1);
+			NRF24L01_Send(buf1);
 		LED_ON;
-		memcpy(buf1, &off,1);
-    NRF24L01_Send(buf1);
-//		if (!BUT)
-//		{
-//			memcpy(buf1, &on,1);
-//			NRF24L01_Send(buf1);
-//		}
-//		else
-//		{
-//			memcpy(buf1, &off,1);
-//			NRF24L01_Send(buf1);
-//		}
+
+		}
 		//NRF24L01_Receive();
 		//retr_cnt = dt & 0xF;
 		//i++;
@@ -146,43 +154,43 @@ int main(void)
 
 		sprintf(str1,"CONFIG: 0x%02X\r\n",dt_reg);
 
-		/*HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
 		dt_reg = NRF24_ReadReg(EN_AA);
 
 		sprintf(str1,"EN_AA: 0x%02X\r\n",dt_reg);
 
-		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
 		dt_reg = NRF24_ReadReg(EN_RXADDR);
 
  		sprintf(str1,"EN_RXADDR: 0x%02X\r\n",dt_reg);
 
-		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
 		dt_reg = NRF24_ReadReg(STATUS);
 
 		sprintf(str1,"STATUS: 0x%02X\r\n",dt_reg);
 
-		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
 		dt_reg = NRF24_ReadReg(RF_SETUP);
 		sprintf(str1,"RF_SETUP: 0x%02X\r\n",dt_reg);
 
-		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
 		NRF24_Read_Buf(TX_ADDR,buf1,3);
 
 		sprintf(str1,"TX_ADDR: 0x%02X, 0x%02X, 0x%02X\r\n",buf1[0],buf1[1],buf1[2]);
 
-		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+//		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
 
 		NRF24_Read_Buf(RX_ADDR_P0,buf1,3);
 
 		sprintf(str1,"RX_ADDR: 0x%02X, 0x%02X, 0x%02X\r\n",buf1[0],buf1[1],buf1[2]);
 
-		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
-*/
+//		HAL_UART_Transmit(&huart1,(uint8_t*)str1,strlen(str1),0x1000);
+ 
   }
   /* USER CODE END 3 */
 }
