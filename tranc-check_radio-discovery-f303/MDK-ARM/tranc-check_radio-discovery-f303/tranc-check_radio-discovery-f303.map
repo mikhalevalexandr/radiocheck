@@ -1410,40 +1410,40 @@ Image Symbol Table
     i.NMI_Handler                            0x08002190   Section        0  stm32f3xx_it.o(i.NMI_Handler)
     i.NRF24L01_RX_Mode                       0x08002194   Section        0  nrf24.o(i.NRF24L01_RX_Mode)
     i.NRF24L01_Send                          0x080021c8   Section        0  nrf24.o(i.NRF24L01_Send)
-    i.NRF24L01_TX_Mode                       0x08002278   Section        0  nrf24.o(i.NRF24L01_TX_Mode)
-    i.NRF24_FlushRX                          0x080022a0   Section        0  nrf24.o(i.NRF24_FlushRX)
-    i.NRF24_FlushTX                          0x080022e0   Section        0  nrf24.o(i.NRF24_FlushTX)
-    i.NRF24_ReadReg                          0x08002320   Section        0  nrf24.o(i.NRF24_ReadReg)
-    i.NRF24_ToggleFeatures                   0x0800237c   Section        0  nrf24.o(i.NRF24_ToggleFeatures)
-    i.NRF24_Transmit                         0x080023cc   Section        0  nrf24.o(i.NRF24_Transmit)
-    i.NRF24_WriteReg                         0x0800242c   Section        0  nrf24.o(i.NRF24_WriteReg)
-    i.NRF24_Write_Buf                        0x08002474   Section        0  nrf24.o(i.NRF24_Write_Buf)
-    i.NRF24_ini                              0x080024c4   Section        0  nrf24.o(i.NRF24_ini)
-    i.PendSV_Handler                         0x08002584   Section        0  stm32f3xx_it.o(i.PendSV_Handler)
-    i.SPI_EndRxTxTransaction                 0x08002586   Section        0  stm32f3xx_hal_spi.o(i.SPI_EndRxTxTransaction)
-    SPI_EndRxTxTransaction                   0x08002587   Thumb Code   100  stm32f3xx_hal_spi.o(i.SPI_EndRxTxTransaction)
-    i.SPI_WaitFifoStateUntilTimeout          0x080025ec   Section        0  stm32f3xx_hal_spi.o(i.SPI_WaitFifoStateUntilTimeout)
-    SPI_WaitFifoStateUntilTimeout            0x080025ed   Thumb Code   242  stm32f3xx_hal_spi.o(i.SPI_WaitFifoStateUntilTimeout)
-    i.SPI_WaitFlagStateUntilTimeout          0x080026e4   Section        0  stm32f3xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
-    SPI_WaitFlagStateUntilTimeout            0x080026e5   Thumb Code   210  stm32f3xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
-    i.SVC_Handler                            0x080027bc   Section        0  stm32f3xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x080027be   Section        0  stm32f3xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x080027c6   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x0800284c   Section        0  system_stm32f3xx.o(i.SystemInit)
-    i.UART_AdvFeatureConfig                  0x08002860   Section        0  stm32f3xx_hal_uart.o(i.UART_AdvFeatureConfig)
-    i.UART_CheckIdleState                    0x08002958   Section        0  stm32f3xx_hal_uart.o(i.UART_CheckIdleState)
-    i.UART_SetConfig                         0x080029cc   Section        0  stm32f3xx_hal_uart.o(i.UART_SetConfig)
-    i.UART_WaitOnFlagUntilTimeout            0x08002c58   Section        0  stm32f3xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    i.UsageFault_Handler                     0x08002d50   Section        0  stm32f3xx_it.o(i.UsageFault_Handler)
-    i.__NVIC_GetPriorityGrouping             0x08002d54   Section        0  stm32f3xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
-    __NVIC_GetPriorityGrouping               0x08002d55   Thumb Code    10  stm32f3xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
-    i.__NVIC_SetPriority                     0x08002d64   Section        0  stm32f3xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x08002d65   Thumb Code    32  stm32f3xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.main                                   0x08002d8c   Section        0  main.o(i.main)
-    x$fpl$fpinit                             0x08002e10   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x08002e10   Number         0  fpinit.o(x$fpl$fpinit)
-    .constdata                               0x08002e1a   Section       32  stm32f3xx_hal_rcc.o(.constdata)
-    .constdata                               0x08002e3a   Section       24  system_stm32f3xx.o(.constdata)
+    i.NRF24L01_TX_Mode                       0x0800227c   Section        0  nrf24.o(i.NRF24L01_TX_Mode)
+    i.NRF24_FlushRX                          0x080022a4   Section        0  nrf24.o(i.NRF24_FlushRX)
+    i.NRF24_FlushTX                          0x080022e4   Section        0  nrf24.o(i.NRF24_FlushTX)
+    i.NRF24_ReadReg                          0x08002324   Section        0  nrf24.o(i.NRF24_ReadReg)
+    i.NRF24_ToggleFeatures                   0x08002380   Section        0  nrf24.o(i.NRF24_ToggleFeatures)
+    i.NRF24_Transmit                         0x080023d0   Section        0  nrf24.o(i.NRF24_Transmit)
+    i.NRF24_WriteReg                         0x08002430   Section        0  nrf24.o(i.NRF24_WriteReg)
+    i.NRF24_Write_Buf                        0x08002478   Section        0  nrf24.o(i.NRF24_Write_Buf)
+    i.NRF24_ini                              0x080024c8   Section        0  nrf24.o(i.NRF24_ini)
+    i.PendSV_Handler                         0x08002588   Section        0  stm32f3xx_it.o(i.PendSV_Handler)
+    i.SPI_EndRxTxTransaction                 0x0800258a   Section        0  stm32f3xx_hal_spi.o(i.SPI_EndRxTxTransaction)
+    SPI_EndRxTxTransaction                   0x0800258b   Thumb Code   100  stm32f3xx_hal_spi.o(i.SPI_EndRxTxTransaction)
+    i.SPI_WaitFifoStateUntilTimeout          0x080025f0   Section        0  stm32f3xx_hal_spi.o(i.SPI_WaitFifoStateUntilTimeout)
+    SPI_WaitFifoStateUntilTimeout            0x080025f1   Thumb Code   242  stm32f3xx_hal_spi.o(i.SPI_WaitFifoStateUntilTimeout)
+    i.SPI_WaitFlagStateUntilTimeout          0x080026e8   Section        0  stm32f3xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
+    SPI_WaitFlagStateUntilTimeout            0x080026e9   Thumb Code   210  stm32f3xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
+    i.SVC_Handler                            0x080027c0   Section        0  stm32f3xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x080027c2   Section        0  stm32f3xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x080027ca   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08002850   Section        0  system_stm32f3xx.o(i.SystemInit)
+    i.UART_AdvFeatureConfig                  0x08002864   Section        0  stm32f3xx_hal_uart.o(i.UART_AdvFeatureConfig)
+    i.UART_CheckIdleState                    0x0800295c   Section        0  stm32f3xx_hal_uart.o(i.UART_CheckIdleState)
+    i.UART_SetConfig                         0x080029d0   Section        0  stm32f3xx_hal_uart.o(i.UART_SetConfig)
+    i.UART_WaitOnFlagUntilTimeout            0x08002c5c   Section        0  stm32f3xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    i.UsageFault_Handler                     0x08002d54   Section        0  stm32f3xx_it.o(i.UsageFault_Handler)
+    i.__NVIC_GetPriorityGrouping             0x08002d58   Section        0  stm32f3xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
+    __NVIC_GetPriorityGrouping               0x08002d59   Thumb Code    10  stm32f3xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
+    i.__NVIC_SetPriority                     0x08002d68   Section        0  stm32f3xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08002d69   Thumb Code    32  stm32f3xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.main                                   0x08002d90   Section        0  main.o(i.main)
+    x$fpl$fpinit                             0x08002e14   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x08002e14   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x08002e1e   Section       32  stm32f3xx_hal_rcc.o(.constdata)
+    .constdata                               0x08002e3e   Section       24  system_stm32f3xx.o(.constdata)
     .data                                    0x20000000   Section        8  nrf24.o(.data)
     .data                                    0x20000008   Section        3  main.o(.data)
     .data                                    0x2000000c   Section        9  stm32f3xx_hal.o(.data)
@@ -1660,36 +1660,36 @@ Image Symbol Table
     MemManage_Handler                        0x0800218d   Thumb Code     4  stm32f3xx_it.o(i.MemManage_Handler)
     NMI_Handler                              0x08002191   Thumb Code     4  stm32f3xx_it.o(i.NMI_Handler)
     NRF24L01_RX_Mode                         0x08002195   Thumb Code    52  nrf24.o(i.NRF24L01_RX_Mode)
-    NRF24L01_Send                            0x080021c9   Thumb Code   170  nrf24.o(i.NRF24L01_Send)
-    NRF24L01_TX_Mode                         0x08002279   Thumb Code    36  nrf24.o(i.NRF24L01_TX_Mode)
-    NRF24_FlushRX                            0x080022a1   Thumb Code    54  nrf24.o(i.NRF24_FlushRX)
-    NRF24_FlushTX                            0x080022e1   Thumb Code    54  nrf24.o(i.NRF24_FlushTX)
-    NRF24_ReadReg                            0x08002321   Thumb Code    88  nrf24.o(i.NRF24_ReadReg)
-    NRF24_ToggleFeatures                     0x0800237d   Thumb Code    72  nrf24.o(i.NRF24_ToggleFeatures)
-    NRF24_Transmit                           0x080023cd   Thumb Code    90  nrf24.o(i.NRF24_Transmit)
-    NRF24_WriteReg                           0x0800242d   Thumb Code    66  nrf24.o(i.NRF24_WriteReg)
-    NRF24_Write_Buf                          0x08002475   Thumb Code    76  nrf24.o(i.NRF24_Write_Buf)
-    NRF24_ini                                0x080024c5   Thumb Code   184  nrf24.o(i.NRF24_ini)
-    PendSV_Handler                           0x08002585   Thumb Code     2  stm32f3xx_it.o(i.PendSV_Handler)
-    SVC_Handler                              0x080027bd   Thumb Code     2  stm32f3xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x080027bf   Thumb Code     8  stm32f3xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x080027c7   Thumb Code   132  main.o(i.SystemClock_Config)
-    SystemInit                               0x0800284d   Thumb Code    14  system_stm32f3xx.o(i.SystemInit)
-    UART_AdvFeatureConfig                    0x08002861   Thumb Code   248  stm32f3xx_hal_uart.o(i.UART_AdvFeatureConfig)
-    UART_CheckIdleState                      0x08002959   Thumb Code   114  stm32f3xx_hal_uart.o(i.UART_CheckIdleState)
-    UART_SetConfig                           0x080029cd   Thumb Code   624  stm32f3xx_hal_uart.o(i.UART_SetConfig)
-    UART_WaitOnFlagUntilTimeout              0x08002c59   Thumb Code   248  stm32f3xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    UsageFault_Handler                       0x08002d51   Thumb Code     4  stm32f3xx_it.o(i.UsageFault_Handler)
-    main                                     0x08002d8d   Thumb Code   122  main.o(i.main)
-    _fp_init                                 0x08002e11   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08002e19   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08002e19   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    aPLLMULFactorTable                       0x08002e1a   Data          16  stm32f3xx_hal_rcc.o(.constdata)
-    aPredivFactorTable                       0x08002e2a   Data          16  stm32f3xx_hal_rcc.o(.constdata)
-    AHBPrescTable                            0x08002e3a   Data          16  system_stm32f3xx.o(.constdata)
-    APBPrescTable                            0x08002e4a   Data           8  system_stm32f3xx.o(.constdata)
-    Region$$Table$$Base                      0x08002e54   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08002e74   Number         0  anon$$obj.o(Region$$Table)
+    NRF24L01_Send                            0x080021c9   Thumb Code   176  nrf24.o(i.NRF24L01_Send)
+    NRF24L01_TX_Mode                         0x0800227d   Thumb Code    36  nrf24.o(i.NRF24L01_TX_Mode)
+    NRF24_FlushRX                            0x080022a5   Thumb Code    54  nrf24.o(i.NRF24_FlushRX)
+    NRF24_FlushTX                            0x080022e5   Thumb Code    54  nrf24.o(i.NRF24_FlushTX)
+    NRF24_ReadReg                            0x08002325   Thumb Code    88  nrf24.o(i.NRF24_ReadReg)
+    NRF24_ToggleFeatures                     0x08002381   Thumb Code    72  nrf24.o(i.NRF24_ToggleFeatures)
+    NRF24_Transmit                           0x080023d1   Thumb Code    90  nrf24.o(i.NRF24_Transmit)
+    NRF24_WriteReg                           0x08002431   Thumb Code    66  nrf24.o(i.NRF24_WriteReg)
+    NRF24_Write_Buf                          0x08002479   Thumb Code    76  nrf24.o(i.NRF24_Write_Buf)
+    NRF24_ini                                0x080024c9   Thumb Code   184  nrf24.o(i.NRF24_ini)
+    PendSV_Handler                           0x08002589   Thumb Code     2  stm32f3xx_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x080027c1   Thumb Code     2  stm32f3xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x080027c3   Thumb Code     8  stm32f3xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x080027cb   Thumb Code   132  main.o(i.SystemClock_Config)
+    SystemInit                               0x08002851   Thumb Code    14  system_stm32f3xx.o(i.SystemInit)
+    UART_AdvFeatureConfig                    0x08002865   Thumb Code   248  stm32f3xx_hal_uart.o(i.UART_AdvFeatureConfig)
+    UART_CheckIdleState                      0x0800295d   Thumb Code   114  stm32f3xx_hal_uart.o(i.UART_CheckIdleState)
+    UART_SetConfig                           0x080029d1   Thumb Code   624  stm32f3xx_hal_uart.o(i.UART_SetConfig)
+    UART_WaitOnFlagUntilTimeout              0x08002c5d   Thumb Code   248  stm32f3xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    UsageFault_Handler                       0x08002d55   Thumb Code     4  stm32f3xx_it.o(i.UsageFault_Handler)
+    main                                     0x08002d91   Thumb Code   122  main.o(i.main)
+    _fp_init                                 0x08002e15   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08002e1d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08002e1d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    aPLLMULFactorTable                       0x08002e1e   Data          16  stm32f3xx_hal_rcc.o(.constdata)
+    aPredivFactorTable                       0x08002e2e   Data          16  stm32f3xx_hal_rcc.o(.constdata)
+    AHBPrescTable                            0x08002e3e   Data          16  system_stm32f3xx.o(.constdata)
+    APBPrescTable                            0x08002e4e   Data           8  system_stm32f3xx.o(.constdata)
+    Region$$Table$$Base                      0x08002e58   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002e78   Number         0  anon$$obj.o(Region$$Table)
     TX_ADDRESS                               0x20000000   Data           3  nrf24.o(.data)
     RX_BUF                                   0x20000003   Data           5  nrf24.o(.data)
     buf1                                     0x20000008   Data           1  main.o(.data)
@@ -1713,9 +1713,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002e90, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002e94, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002e74, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002e78, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1818,57 +1818,57 @@ Memory Map of the image
     0x0800218c   0x0800218c   0x00000004   Code   RO          279    i.MemManage_Handler  stm32f3xx_it.o
     0x08002190   0x08002190   0x00000004   Code   RO          280    i.NMI_Handler       stm32f3xx_it.o
     0x08002194   0x08002194   0x00000034   Code   RO           14    i.NRF24L01_RX_Mode  nrf24.o
-    0x080021c8   0x080021c8   0x000000b0   Code   RO           15    i.NRF24L01_Send     nrf24.o
-    0x08002278   0x08002278   0x00000028   Code   RO           16    i.NRF24L01_TX_Mode  nrf24.o
-    0x080022a0   0x080022a0   0x00000040   Code   RO           17    i.NRF24_FlushRX     nrf24.o
-    0x080022e0   0x080022e0   0x00000040   Code   RO           18    i.NRF24_FlushTX     nrf24.o
-    0x08002320   0x08002320   0x0000005c   Code   RO           19    i.NRF24_ReadReg     nrf24.o
-    0x0800237c   0x0800237c   0x00000050   Code   RO           21    i.NRF24_ToggleFeatures  nrf24.o
-    0x080023cc   0x080023cc   0x00000060   Code   RO           22    i.NRF24_Transmit    nrf24.o
-    0x0800242c   0x0800242c   0x00000048   Code   RO           23    i.NRF24_WriteReg    nrf24.o
-    0x08002474   0x08002474   0x00000050   Code   RO           24    i.NRF24_Write_Buf   nrf24.o
-    0x080024c4   0x080024c4   0x000000c0   Code   RO           25    i.NRF24_ini         nrf24.o
-    0x08002584   0x08002584   0x00000002   Code   RO          281    i.PendSV_Handler    stm32f3xx_it.o
-    0x08002586   0x08002586   0x00000064   Code   RO          448    i.SPI_EndRxTxTransaction  stm32f3xx_hal_spi.o
-    0x080025ea   0x080025ea   0x00000002   PAD
-    0x080025ec   0x080025ec   0x000000f8   Code   RO          453    i.SPI_WaitFifoStateUntilTimeout  stm32f3xx_hal_spi.o
-    0x080026e4   0x080026e4   0x000000d8   Code   RO          454    i.SPI_WaitFlagStateUntilTimeout  stm32f3xx_hal_spi.o
-    0x080027bc   0x080027bc   0x00000002   Code   RO          282    i.SVC_Handler       stm32f3xx_it.o
-    0x080027be   0x080027be   0x00000008   Code   RO          283    i.SysTick_Handler   stm32f3xx_it.o
-    0x080027c6   0x080027c6   0x00000084   Code   RO          225    i.SystemClock_Config  main.o
-    0x0800284a   0x0800284a   0x00000002   PAD
-    0x0800284c   0x0800284c   0x00000014   Code   RO         2823    i.SystemInit        system_stm32f3xx.o
-    0x08002860   0x08002860   0x000000f8   Code   RO         2391    i.UART_AdvFeatureConfig  stm32f3xx_hal_uart.o
-    0x08002958   0x08002958   0x00000072   Code   RO         2392    i.UART_CheckIdleState  stm32f3xx_hal_uart.o
-    0x080029ca   0x080029ca   0x00000002   PAD
-    0x080029cc   0x080029cc   0x0000028c   Code   RO         2408    i.UART_SetConfig    stm32f3xx_hal_uart.o
-    0x08002c58   0x08002c58   0x000000f8   Code   RO         2413    i.UART_WaitOnFlagUntilTimeout  stm32f3xx_hal_uart.o
-    0x08002d50   0x08002d50   0x00000004   Code   RO          284    i.UsageFault_Handler  stm32f3xx_it.o
-    0x08002d54   0x08002d54   0x00000010   Code   RO         1255    i.__NVIC_GetPriorityGrouping  stm32f3xx_hal_cortex.o
-    0x08002d64   0x08002d64   0x00000028   Code   RO         1256    i.__NVIC_SetPriority  stm32f3xx_hal_cortex.o
-    0x08002d8c   0x08002d8c   0x00000084   Code   RO          226    i.main              main.o
-    0x08002e10   0x08002e10   0x0000000a   Code   RO         2977    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08002e1a   0x08002e1a   0x00000020   Data   RO          938    .constdata          stm32f3xx_hal_rcc.o
-    0x08002e3a   0x08002e3a   0x00000018   Data   RO         2824    .constdata          system_stm32f3xx.o
-    0x08002e52   0x08002e52   0x00000002   PAD
-    0x08002e54   0x08002e54   0x00000020   Data   RO         3033    Region$$Table       anon$$obj.o
+    0x080021c8   0x080021c8   0x000000b4   Code   RO           15    i.NRF24L01_Send     nrf24.o
+    0x0800227c   0x0800227c   0x00000028   Code   RO           16    i.NRF24L01_TX_Mode  nrf24.o
+    0x080022a4   0x080022a4   0x00000040   Code   RO           17    i.NRF24_FlushRX     nrf24.o
+    0x080022e4   0x080022e4   0x00000040   Code   RO           18    i.NRF24_FlushTX     nrf24.o
+    0x08002324   0x08002324   0x0000005c   Code   RO           19    i.NRF24_ReadReg     nrf24.o
+    0x08002380   0x08002380   0x00000050   Code   RO           21    i.NRF24_ToggleFeatures  nrf24.o
+    0x080023d0   0x080023d0   0x00000060   Code   RO           22    i.NRF24_Transmit    nrf24.o
+    0x08002430   0x08002430   0x00000048   Code   RO           23    i.NRF24_WriteReg    nrf24.o
+    0x08002478   0x08002478   0x00000050   Code   RO           24    i.NRF24_Write_Buf   nrf24.o
+    0x080024c8   0x080024c8   0x000000c0   Code   RO           25    i.NRF24_ini         nrf24.o
+    0x08002588   0x08002588   0x00000002   Code   RO          281    i.PendSV_Handler    stm32f3xx_it.o
+    0x0800258a   0x0800258a   0x00000064   Code   RO          448    i.SPI_EndRxTxTransaction  stm32f3xx_hal_spi.o
+    0x080025ee   0x080025ee   0x00000002   PAD
+    0x080025f0   0x080025f0   0x000000f8   Code   RO          453    i.SPI_WaitFifoStateUntilTimeout  stm32f3xx_hal_spi.o
+    0x080026e8   0x080026e8   0x000000d8   Code   RO          454    i.SPI_WaitFlagStateUntilTimeout  stm32f3xx_hal_spi.o
+    0x080027c0   0x080027c0   0x00000002   Code   RO          282    i.SVC_Handler       stm32f3xx_it.o
+    0x080027c2   0x080027c2   0x00000008   Code   RO          283    i.SysTick_Handler   stm32f3xx_it.o
+    0x080027ca   0x080027ca   0x00000084   Code   RO          225    i.SystemClock_Config  main.o
+    0x0800284e   0x0800284e   0x00000002   PAD
+    0x08002850   0x08002850   0x00000014   Code   RO         2823    i.SystemInit        system_stm32f3xx.o
+    0x08002864   0x08002864   0x000000f8   Code   RO         2391    i.UART_AdvFeatureConfig  stm32f3xx_hal_uart.o
+    0x0800295c   0x0800295c   0x00000072   Code   RO         2392    i.UART_CheckIdleState  stm32f3xx_hal_uart.o
+    0x080029ce   0x080029ce   0x00000002   PAD
+    0x080029d0   0x080029d0   0x0000028c   Code   RO         2408    i.UART_SetConfig    stm32f3xx_hal_uart.o
+    0x08002c5c   0x08002c5c   0x000000f8   Code   RO         2413    i.UART_WaitOnFlagUntilTimeout  stm32f3xx_hal_uart.o
+    0x08002d54   0x08002d54   0x00000004   Code   RO          284    i.UsageFault_Handler  stm32f3xx_it.o
+    0x08002d58   0x08002d58   0x00000010   Code   RO         1255    i.__NVIC_GetPriorityGrouping  stm32f3xx_hal_cortex.o
+    0x08002d68   0x08002d68   0x00000028   Code   RO         1256    i.__NVIC_SetPriority  stm32f3xx_hal_cortex.o
+    0x08002d90   0x08002d90   0x00000084   Code   RO          226    i.main              main.o
+    0x08002e14   0x08002e14   0x0000000a   Code   RO         2977    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08002e1e   0x08002e1e   0x00000020   Data   RO          938    .constdata          stm32f3xx_hal_rcc.o
+    0x08002e3e   0x08002e3e   0x00000018   Data   RO         2824    .constdata          system_stm32f3xx.o
+    0x08002e56   0x08002e56   0x00000002   PAD
+    0x08002e58   0x08002e58   0x00000020   Data   RO         3033    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x08002e90, Size: 0x00000000, Max: 0x00002000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x08002e94, Size: 0x00000000, Max: 0x00002000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002e74, Size: 0x00000778, Max: 0x0000a000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002e78, Size: 0x00000778, Max: 0x0000a000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08002e74   0x00000008   Data   RW           26    .data               nrf24.o
-    0x20000008   0x08002e7c   0x00000003   Data   RW          228    .data               main.o
-    0x2000000b   0x08002e7f   0x00000001   PAD
-    0x2000000c   0x08002e80   0x00000009   Data   RW          775    .data               stm32f3xx_hal.o
-    0x20000015   0x08002e89   0x00000003   PAD
-    0x20000018   0x08002e8c   0x00000004   Data   RW         2825    .data               system_stm32f3xx.o
+    0x20000000   0x08002e78   0x00000008   Data   RW           26    .data               nrf24.o
+    0x20000008   0x08002e80   0x00000003   Data   RW          228    .data               main.o
+    0x2000000b   0x08002e83   0x00000001   PAD
+    0x2000000c   0x08002e84   0x00000009   Data   RW          775    .data               stm32f3xx_hal.o
+    0x20000015   0x08002e8d   0x00000003   PAD
+    0x20000018   0x08002e90   0x00000004   Data   RW         2825    .data               system_stm32f3xx.o
     0x2000001c        -       0x000000fc   Zero   RW          227    .bss                main.o
     0x20000118        -       0x00000060   Zero   RW         2907    .bss                c_w.l(libspace.o)
     0x20000178        -       0x00000200   Zero   RW            2    HEAP                startup_stm32f303xc.o
@@ -1883,7 +1883,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        690         36          0          3        252       4349   main.o
-      1056         76          0          8          0     561809   nrf24.o
+      1060         74          0          8          0     561813   nrf24.o
         64         26        392          0       1536        860   startup_stm32f303xc.o
        192         36          0          9          0      13549   stm32f3xx_hal.o
        272         22          0          0          0      33858   stm32f3xx_hal_cortex.o
@@ -1897,7 +1897,7 @@ Image component sizes
         20          6         24          4          0       1183   system_stm32f3xx.o
 
     ----------------------------------------------------------------------
-     10802        422        482         28       1788     646554   Object Totals
+     10806        420        482         28       1788     646558   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         12          0          2          4          0          0   (incl. Padding)
 
@@ -1950,15 +1950,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     11410        438        482         28       1884     641474   Grand Totals
-     11410        438        482         28       1884     641474   ELF Image Totals
-     11410        438        482         28          0          0   ROM Totals
+     11414        436        482         28       1884     641478   Grand Totals
+     11414        436        482         28       1884     641478   ELF Image Totals
+     11414        436        482         28          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                11892 (  11.61kB)
+    Total RO  Size (Code + RO Data)                11896 (  11.62kB)
     Total RW  Size (RW Data + ZI Data)              1912 (   1.87kB)
-    Total ROM Size (Code + RO Data + RW Data)      11920 (  11.64kB)
+    Total ROM Size (Code + RO Data + RW Data)      11924 (  11.64kB)
 
 ==============================================================================
 

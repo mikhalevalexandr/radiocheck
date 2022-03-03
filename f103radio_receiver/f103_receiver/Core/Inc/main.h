@@ -69,6 +69,8 @@ void Error_Handler(void);
 #define LD2_GPIO_Port GPIOB
 #define RELAY_Pin GPIO_PIN_15
 #define RELAY_GPIO_Port GPIOA
+#define SHDN_Pin GPIO_PIN_4
+#define SHDN_GPIO_Port GPIOB
 #define LEDR_Pin GPIO_PIN_5
 #define LEDR_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */

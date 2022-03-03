@@ -1,9 +1,9 @@
 --cpu Cortex-M3
 "f103_receiver\startup_stm32f103xb.o"
+"f103_receiver\nrf24.o"
 "f103_receiver\main.o"
 "f103_receiver\stm32f1xx_it.o"
 "f103_receiver\stm32f1xx_hal_msp.o"
-"f103_receiver\nrf24.o"
 "f103_receiver\stm32f1xx_hal_gpio_ex.o"
 "f103_receiver\stm32f1xx_hal_spi.o"
 "f103_receiver\stm32f1xx_hal.o"

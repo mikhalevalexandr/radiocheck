@@ -206,6 +206,7 @@ uint8_t NRF24L01_Receive(void)
 {
   uint8_t status=0x01;
   uint8_t gt=0x01;
+	uint8_t count=0;
 	//while(IRQ1) {}
 //	status = NRF24_ReadReg(STATUS);
 //	sprintf(str1,"STATUS: 0x%02X\r\n",status);
@@ -220,9 +221,9 @@ uint8_t NRF24L01_Receive(void)
 			DelayMicro(1500);
 			//NRF24_WriteReg(STATUS, 0x40);
 			status = NRF24_ReadReg(STATUS);
-
+			count++;
 		}
-		while (!(status & 0x40));
+		while (!(status & 0x40) && count<=10);
 	//}
 //  
 //  {

@@ -87,7 +87,6 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -104,6 +103,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim1);
 	NRF24_ini();
+		HAL_GPIO_WritePin(SHDN_GPIO_Port, SHDN_Pin, GPIO_PIN_SET);
+
 	HAL_Delay(200);
   /* USER CODE END 2 */
 
@@ -310,7 +311,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, CE1_Pin|CSN1_Pin|RELAY_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LD2_Pin|LEDR_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LD2_Pin|SHDN_Pin|LEDR_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : CE1_Pin CSN1_Pin RELAY_Pin */
   GPIO_InitStruct.Pin = CE1_Pin|CSN1_Pin|RELAY_Pin;
@@ -331,6 +332,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : SHDN_Pin */
+  GPIO_InitStruct.Pin = SHDN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(SHDN_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
