@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "NRF24.h"
+#include "main.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,6 +58,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern DMA_HandleTypeDef hdma_adc1;
 extern TIM_HandleTypeDef htim1;
 /* USER CODE BEGIN EV */
 
@@ -212,6 +214,30 @@ void EXTI0_IRQHandler(void)
   /* USER CODE BEGIN EXTI0_IRQn 1 */
 
   /* USER CODE END EXTI0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 channel1 global interrupt.
+  */
+void DMA1_Channel1_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel1_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_adc1);
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
+	/*McuVoltage (STM power supply Voltage) can change, but ADC_MAX(corresponding to McuVoltage) is always 0xFFF,
+	therefore ADC codes( in this case corresponding to ADC_REFERENCE_VOLTAGE and batteryVoltage) can change
+	But ADC_REFERENCE_VOLTAGE is stable and around 1.2 Volts,  so we can find out mcuVoltage thanks to it. 
+	And then with knowledge of real McuVoltage we can find out real batteryVoltage
+	ADC[0] is ADC code corresponding to ADC_REFERENCE_VOLTAGE
+	ADC[1] is ADC code corresponding to batteryVoltage*/
+			mcuVoltage = ADC_MAX * ADC_REFERENCE_VOLTAGE / ADC[0];
+			batteryVoltage = VOLTAGE_DEVIDER * ADC[1] * mcuVoltage / ADC_MAX;
+	if (batteryVoltage<MINIMUM_BATTERY_VOLTAGE)
+			HAL_GPIO_WritePin(SHDN_GPIO_Port, SHDN_Pin, GPIO_PIN_RESET);
+
+  /* USER CODE END DMA1_Channel1_IRQn 1 */
 }
 
 /**

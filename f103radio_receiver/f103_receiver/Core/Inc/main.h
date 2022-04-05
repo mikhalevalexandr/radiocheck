@@ -47,7 +47,9 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+extern uint16_t ADC[2];//buffer for reading battery voltage
+extern float mcuVoltage;// MCU supply Voltage
+extern float batteryVoltage;// Battery voltage 
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
@@ -74,6 +76,16 @@ void Error_Handler(void);
 #define LEDR_Pin GPIO_PIN_5
 #define LEDR_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
+#define ADC_REFERENCE_VOLTAGE 1.2/* Voltage of Vrefint - STM32 internal voltage reference 
+																		(look stm datasheet) is around 1.2 Volts*/
+#define ADC_MAX               0xFFF /* It is maximum value in 12 bit adc. It corresponds to STM power supply voltage 
+																			 (VDDA or Vref+. It depends on microcontroller)*/
+#define VREFINT_CAL 					1638.00/* Raw data (ADC code for 1.2 Volts)acquired at a temperature of 30 °C (± 5 °C),
+																				VDDA = VREF+ = 3.0 V (± 10 mV)*/
+#define VOLTAGE_DEVIDER 			2 /*Voltage devider before ADC. For example, battery voltage is 5V, there is 2.5V on stm ADC,
+because of resistors voltage devider on the circuit board*/
+
+#define MINIMUM_BATTERY_VOLTAGE 			3.2 /*Voltage devider before ADC. For example battery voltage is 5V, there is 2.5V on stm ADC */
 
 /* USER CODE END Private defines */
 
